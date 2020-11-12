@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+
+<center> 
+    Volunteer resources help find Jordan Naterer
+    
+    <br/><br/>
+</center>
+
+{% if user.is_authenticated %}
+<center>
+    <h1> You are logged in... </h1><br/> <br/>
+    Please use navigation bar to select the demonstation! <br/><br/>
+
+    
+</center>
+    
+
+    <br/>
+{% else %}
+    <center> <h1> Please login first! </h1> </center>
+    <br/> <br/>
+    <a class="btn btn-primary btn-lg btn-block" href="{% url 'login' %}" role="button">Login page</a>
+    <br/>
+{% endif %}
+
+
+<img src="http://drive.google.com/uc?
+export=view&id=19rgMeZ89J-aqtCHg-aJ1VzDwQap0mYex" alt="Google Logo">
+
+    <br/><br/>
+
+{% endblock %}
